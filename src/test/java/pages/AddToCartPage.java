@@ -1,9 +1,10 @@
 package pages;
 
+import base.BaseClass;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-public class AddToCartPage extends BasePages{
+public class AddToCartPage extends BaseClass {
 
     private By addToCartButton = By.id("add-to-cart-sauce-labs-backpack");
     private By cartMenuButton = By.className("shopping_cart_link");
