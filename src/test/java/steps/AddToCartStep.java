@@ -3,9 +3,9 @@ package steps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.AddToCartPage;
-import pages.BasePages;
+import base.BaseClass;
 
-public class AddToCartStep extends BasePages {
+public class AddToCartStep extends BaseClass {
     protected AddToCartPage addToCartPage;
 
     @When("User click add to cart")

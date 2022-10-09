@@ -1,10 +1,11 @@
 package pages;
 
+import base.BaseClass;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
 
-public class LoginPage extends BasePages{
+public class LoginPage extends BaseClass {
 
     private By usernameField =  By.id( "user-name");
     private By passwordField =  By.id("password");

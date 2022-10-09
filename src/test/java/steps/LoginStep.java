@@ -3,11 +3,11 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.BasePages;
+import base.BaseClass;
 import pages.LoginPage;
 
 
-public class LoginStep extends BasePages {
+public class LoginStep extends BaseClass {
     protected LoginPage loginPage;
 
     @Given("On page login")
