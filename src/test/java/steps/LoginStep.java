@@ -8,11 +8,10 @@ import pages.LoginPage;
 
 
 public class LoginStep extends BaseClass {
-    protected LoginPage loginPage;
+    protected LoginPage loginPage = new LoginPage();
 
     @Given("On page login")
     public void onPageLogin() {
-        loginPage = new LoginPage();
         goToSite();
     }
 
@@ -34,7 +33,6 @@ public class LoginStep extends BaseClass {
     @Then("Navigate to dashboard")
     public void navigateToDashboard() {
         loginPage.verifyProductTitle();
-        closeBrowser();
     }
 
 }

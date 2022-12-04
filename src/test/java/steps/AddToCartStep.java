@@ -1,16 +1,16 @@
 package steps;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.AddToCartPage;
 import base.BaseClass;
 
 public class AddToCartStep extends BaseClass {
-    protected AddToCartPage addToCartPage;
+    protected AddToCartPage addToCartPage = new AddToCartPage();
 
     @When("User click add to cart")
     public void userClickAddToCart() throws InterruptedException {
-        addToCartPage = new AddToCartPage();
         Thread.sleep(2000);
         addToCartPage.clickAddToCart();
     }
@@ -24,6 +24,6 @@ public class AddToCartStep extends BaseClass {
     public void seeProductOnCartPage() throws InterruptedException{
         addToCartPage.validateProduct();
         Thread.sleep(3000);
-        closeBrowser();
     }
+
 }

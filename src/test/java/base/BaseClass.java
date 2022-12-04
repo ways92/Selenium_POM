@@ -1,5 +1,6 @@
 package base;
 
+import io.cucumber.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,6 +41,7 @@ public class BaseClass {
         }
     }
 
+
     private void openBrowser() {
         if (browser.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
@@ -47,14 +49,13 @@ public class BaseClass {
         } else if (browser.equals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
+        } else {
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
         }
         driver.manage().window().maximize();
     }
 
-    public void closeBrowser() {
-//        driver.quit();
-        driver.close();
-    }
 
     public void goToSite() {
         try {
@@ -67,6 +68,12 @@ public class BaseClass {
             e.printStackTrace();
 
         }
+    }
+
+
+    public void closeBrowser() {
+//        driver.quit();
+        driver.close();
     }
 
 }
