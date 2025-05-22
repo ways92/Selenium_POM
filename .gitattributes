@@ -1,2 +1,2 @@
 *.html linguist-generated
-public/* linguist-vendored
+test-output/* linguist-vendored
